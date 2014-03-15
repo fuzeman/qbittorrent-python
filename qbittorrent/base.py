@@ -38,6 +38,13 @@ class Base(object):
             log.debug('%s is missing item with key "%s" and value %s', self.__class__, key, repr(value))
 
     @classmethod
+    def parse(cls, client, data):
+        obj = cls(client._url, client._session, client)
+        obj._fill(data)
+
+        return obj
+
+    @classmethod
     def set_property(cls, obj, key, value):
         prop = cls.properties.get(key, {})
 

@@ -11,10 +11,3 @@ class File(Base):
         self.priority = None
 
         self.is_seed = None
-
-    @classmethod
-    def parse(cls, client, data):
-        f = cls(client._url, client._session, client)
-        f._fill(data)
-
-        return f

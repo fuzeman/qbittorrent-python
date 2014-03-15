@@ -62,10 +62,3 @@ class Torrent(Base):
 
     def get_trackers(self):
         pass
-
-    @classmethod
-    def parse(cls, client, data):
-        t = cls(client._url, client._session, client)
-        t._fill(data)
-
-        return t
