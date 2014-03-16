@@ -1,8 +1,8 @@
-import time
 from qbittorrent.base import Base
 from qbittorrent.torrent import Torrent
 from requests import Session
 from requests.auth import HTTPDigestAuth
+import time
 
 
 class QBittorrentClient(Base):
